@@ -1,12 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
-import OpenAI from "openai";
-
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY!,
-});
 
 export async function POST(req: NextRequest) {
   try {
+    const { default: OpenAI } = await import("openai");
+    if (!process.env.OPENAI_API_KEY) {
+      return NextResponse.json({ error: "Missing API key" }, { status: 500 });
+    }
+    const openai = new OpenAI({
+      apiKey: process.env.OPENAI_API_KEY,
+    });
     const { resumeText, jobDescription, mode } = await req.json();
 
     // 🧹 Stronger preprocessing: split bullets + sentences + sentence-to-bullet fallback
