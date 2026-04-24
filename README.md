@@ -1,36 +1,139 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Adversarial Resume Auditor
 
-## Getting Started
+An AI-powered system that analyzes resumes against job descriptions, identifies where automated hiring systems fail, and provides actionable strategies to improve ATS outcomes.
 
-First, run the development server:
+---
+
+## 🚀 Overview
+
+Most resume tools tell you what’s missing.
+
+This tool goes further.
+
+It simulates multiple AI screening systems (like ATS and LLM-based evaluators), highlights where they misinterpret your resume, and shows you exactly how to fix it.
+
+---
+
+## 💡 Key Idea
+
+Hiring today is heavily influenced by automated systems.
+
+This project answers:
+
+- Where will AI misjudge you?
+- Why does that happen?
+- How can you fix it?
+- What impact will the fix have?
+
+---
+
+## ✨ Features
+
+- **Dual AI Evaluation**
+  - Compares GPT-style analysis vs ATS-style scoring
+
+- **AI Blind Spot Detection**
+  - Identifies areas where your resume may be undervalued
+
+- **Disagreement Insights**
+  - Highlights conflicting decisions between AI systems
+
+- **Adversarial Insights Engine**
+  - Breaks down each issue into:
+    - Risk
+    - AI Behavior
+    - Fix to Beat AI
+    - Outcome
+
+- **Human Context Addendum**
+  - Generates explanation to override AI misinterpretation
+
+- **PDF Resume Upload**
+  - Extracts and analyzes resume content directly
+
+---
+
+## 🧠 How It Works
+
+1. Upload or paste your resume
+2. Paste job description
+3. System runs:
+   - GPT-style evaluation
+   - ATS-style evaluation
+4. Compares results
+5. Generates:
+   - Score comparison
+   - Blind spots
+   - Adversarial strategies
+
+---
+
+## 🛠 Tech Stack
+
+- **Frontend:** Next.js (App Router), React, Tailwind CSS
+- **Backend:** Next.js API Routes
+- **AI:** OpenAI API
+- **PDF Parsing:** pdf.js
+
+---
+
+## 📊 Output Example
+
+Each insight is structured as:
+Risk:
+Freelance experience undervalued
+
+AI Behavior:
+ATS prioritizes structured job titles
+
+Fix to Beat AI:
+Rename role to “Software Engineer (Contract)”
+
+Outcome:
+Improves keyword match and avoids auto-rejection
+
+---
+
+## ⚠️ Why This Project is Different
+
+Most tools:
+- optimize resumes
+
+This tool:
+- exposes how AI systems behave
+- teaches users how to work around them
+
+---
+
+## 📦 Setup
 
 ```bash
+git clone https://github.com/yash-2304/Adversarial-Resume-Auditor.git
+cd adversarial-resume-auditor
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🔑 Environment Variables
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Create .env.local:
+OPENAI_API_KEY=your_api_key_here
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🌐 Future Improvements
 
-## Learn More
+* Export report as PDF
+* Shareable results link
+* Resume version comparison
+* Save analysis history
 
-To learn more about Next.js, take a look at the following resources:
+👨‍💻 Author
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Yash Prajapati
+GitHub: https://github.com/yash-2304
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+⸻
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+📜 License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
