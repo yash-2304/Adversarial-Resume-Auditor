@@ -17,7 +17,8 @@ export default function Home() {
     // dynamically import ONLY in browser
     if (typeof window === "undefined") return;
 
-    const pdfjsLib = await import("pdfjs-dist/legacy/build/pdf");
+    // @ts-ignore
+    const pdfjsLib = await import("pdfjs-dist/build/pdf");
 
     // use locally hosted worker to avoid version mismatch and CDN issues
     pdfjsLib.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.js";
